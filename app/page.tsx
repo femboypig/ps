@@ -93,8 +93,8 @@ export default function Home() {
             </div>
             <div className="flex items-baseline">
               <span className="w-20 font-bold text-neutral-800 dark:text-neutral-200 shrink-0">telegram:</span>
-              <a href="https://t.me/ifemboypig" target="_blank" rel="noopener noreferrer" className="border-b border-neutral-300 dark:border-neutral-700 hover:border-pink-500 dark:hover:border-pink-400 transition-colors">
-                t.me/ifemboypig
+              <a href="https://t.me/zigmonster" target="_blank" rel="noopener noreferrer" className="border-b border-neutral-300 dark:border-neutral-700 hover:border-pink-500 dark:hover:border-pink-400 transition-colors">
+                t.me/zigmonster
               </a>
             </div>
             <div className="flex items-start">
