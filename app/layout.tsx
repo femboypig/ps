@@ -13,9 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-mono text-base leading-relaxed bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100 antialiased">
-        <div className="max-w-2xl mx-auto px-6 py-16">
+      <body className="bg-[var(--color-page)] text-[var(--color-ink)] antialiased lg:overflow-hidden">
+        <div className="min-h-screen px-5 pt-0 pb-4 sm:px-8 sm:pt-0 sm:pb-6 lg:h-screen lg:py-5">
+          <div className="mx-auto h-full max-w-6xl">
           {children}
+          </div>
         </div>
       </body>
     </html>

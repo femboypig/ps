@@ -31,35 +31,36 @@ export default function PgpKey() {
   };
 
   return (
-    <div className="mt-4 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden bg-neutral-50/50 dark:bg-neutral-900/10 backdrop-blur-sm transition-all duration-300">
-      {/* Top action bar */}
-      <div className="flex justify-between items-center px-4 py-3 bg-neutral-100/50 dark:bg-neutral-900/50 border-b border-neutral-200 dark:border-neutral-800">
-        <span className="text-xs font-bold font-mono tracking-wider text-neutral-700 dark:text-neutral-300">
-          SECURE_KEY.ASC
-        </span>
-        <div className="flex items-center gap-3">
+    <div className="mt-6 overflow-hidden rounded-xl border border-[var(--color-line)] bg-[var(--color-panel)]">
+      <div className="flex items-center justify-between gap-3 border-b border-[var(--color-line)] px-4 py-3">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]"></span>
+          <span className="font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[var(--color-soft)]">
+            pgp_key.asc
+          </span>
+        </div>
+        <div className="flex items-center gap-4 text-[11px] uppercase tracking-[0.08em] text-[var(--color-soft)]">
           <button
             onClick={copyKey}
-            className="text-[11px] font-mono font-semibold text-neutral-500 hover:text-pink-500 dark:text-neutral-400 dark:hover:text-pink-400 transition-colors"
+            className="cursor-pointer font-mono transition-colors hover:text-[var(--color-ink)]"
           >
-            {copied ? '[copied]' : '[copy]'}
+            {copied ? 'Copied' : 'Copy'}
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[11px] font-mono font-semibold text-neutral-500 hover:text-pink-500 dark:text-neutral-400 dark:hover:text-pink-400 transition-colors"
+            className="cursor-pointer font-mono transition-colors hover:text-[var(--color-ink)]"
           >
-            {isOpen ? '[hide]' : '[show]'}
+            {isOpen ? 'Hide' : 'Show'}
           </button>
         </div>
       </div>
 
-      {/* Main panel */}
       <div
         className={`transition-all duration-500 ease-in-out overflow-hidden ${
           isOpen ? 'max-h-[350px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="p-4 bg-neutral-50 dark:bg-neutral-900/40 font-mono text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400 select-all overflow-x-auto leading-relaxed border-t border-neutral-200 dark:border-neutral-800">
+        <div className="overflow-x-auto border-t border-[var(--color-line)] px-4 py-4 font-mono text-[10px] leading-relaxed text-[var(--color-soft)] select-all sm:text-xs">
           <pre className="whitespace-pre">{PGP_KEY}</pre>
         </div>
       </div>
